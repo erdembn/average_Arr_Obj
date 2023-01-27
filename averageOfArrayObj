@@ -1,0 +1,19 @@
+const studentsArray = require('./students.js');
+
+const getAverages = (students) => {
+    let averages = [];
+
+    for (student in students) {
+        let sum = 0;
+        students_grade = students[student].grades
+
+        students_grade.forEach(function (num) { sum += num });
+        average = sum / students_grade.length;
+        averages.push(average)
+    }
+
+
+    return averages;
+}
+
+console.log(getAverages(studentsArray));
